@@ -6,18 +6,23 @@ import Registro from './pages/Registro'
 import Feed from './pages/Feed'
 import EditarPerfil from './pages/EditarPerfil'
 import VerPerfil from './pages/VerPerfil'
+import Matches from './pages/Matches'
+import Chat from './pages/Chat'
 
 export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/login"           element={<Login />} />
-          <Route path="/registro"        element={<Registro />} />
-          <Route path="/feed"            element={<RutaProtegida><Feed /></RutaProtegida>} />
-          <Route path="/perfil/editar"   element={<RutaProtegida><EditarPerfil /></RutaProtegida>} />
-          <Route path="/perfil/:id"      element={<RutaProtegida><VerPerfil /></RutaProtegida>} />
-          <Route path="*"               element={<Navigate to="/feed" replace />} />
+          <Route path="/login"         element={<Login />} />
+          <Route path="/registro"      element={<Registro />} />
+          <Route path="/feed"          element={<RutaProtegida><Feed /></RutaProtegida>} />
+          <Route path="/perfil/editar" element={<RutaProtegida><EditarPerfil /></RutaProtegida>} />
+          <Route path="/perfil/:id"    element={<RutaProtegida><VerPerfil /></RutaProtegida>} />
+          <Route path="/matches"       element={<RutaProtegida><Matches /></RutaProtegida>} />
+          <Route path="/chats"         element={<RutaProtegida><Matches /></RutaProtegida>} />
+          <Route path="/chat/:matchId" element={<RutaProtegida><Chat /></RutaProtegida>} />
+          <Route path="*"              element={<Navigate to="/feed" replace />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
