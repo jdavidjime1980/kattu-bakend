@@ -8,6 +8,8 @@ import EditarPerfil from './pages/EditarPerfil'
 import VerPerfil from './pages/VerPerfil'
 import Matches from './pages/Matches'
 import Chat from './pages/Chat'
+import Wallet from './pages/Wallet'
+import Retiro from './pages/Retiro'
 
 export default function App() {
   return (
@@ -22,6 +24,8 @@ export default function App() {
           <Route path="/matches"       element={<RutaProtegida><Matches /></RutaProtegida>} />
           <Route path="/chats"         element={<RutaProtegida><Matches /></RutaProtegida>} />
           <Route path="/chat/:matchId" element={<RutaProtegida><Chat /></RutaProtegida>} />
+          <Route path="/wallet"        element={<RutaProtegida><Wallet /></RutaProtegida>} />
+          <Route path="/retiro"        element={<RutaProtegida><Retiro /></RutaProtegida>} />
           <Route path="*"              element={<Navigate to="/feed" replace />} />
         </Routes>
       </BrowserRouter>
